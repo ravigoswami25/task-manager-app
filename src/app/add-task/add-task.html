@@ -1,1 +1,15 @@
-<p>add-task works!</p>
+<section class="add-task" aria-label="Add a new task">
+  <label class="add-task__label" for="task-title">New task</label>
+  <div class="add-task__row">
+    <input
+      id="task-title"
+      class="add-task__input"
+      type="text"
+      [ngModel]="title()"
+      (ngModelChange)="title.set($event)"
+      placeholder="What needs to be done?"
+      (keyup.enter)="addTask()"
+    />
+    <button type="button" class="add-task__btn" (click)="addTask()">Add</button>
+  </div>
+</section>

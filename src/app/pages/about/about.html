@@ -1,1 +1,33 @@
-<p>about works!</p>
+<article class="about">
+  <h1 class="about__title">About this app</h1>
+  <p class="about__lead">
+    Task Manager is a small Angular app for creating, listing, and removing tasks. It is a clear example of standalone
+    components, routing, and client-side persistence without a backend.
+  </p>
+
+  <section class="about__section">
+    <h2 class="about__heading">What you can do</h2>
+    <ul class="about__list">
+      <li>Add tasks on the home page; the list updates right away and data is saved in your browser.</li>
+      <li>Delete tasks when you are done with them.</li>
+      <li>Move between Home and this About page using the header links.</li>
+    </ul>
+  </section>
+
+  <section class="about__section">
+    <h2 class="about__heading">How it works</h2>
+    <p>
+      Tasks are stored in <strong>localStorage</strong> under a fixed key. Each browser profile has its own storage, so
+      nothing is shared between users or devices. Refreshing the page keeps your tasks; clearing site data removes them.
+    </p>
+    <p>
+      A shared <strong>TaskService</strong> reads and writes that storage and notifies the task list when data changes,
+      so the UI stays in sync after add or delete without a full reload.
+    </p>
+  </section>
+
+  <section class="about__section">
+    <h2 class="about__heading">Tech stack</h2>
+    <p class="about__tags">Angular · TypeScript · localStorage</p>
+  </section>
+</article>

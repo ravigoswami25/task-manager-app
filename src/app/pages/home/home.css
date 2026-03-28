@@ -1,0 +1,6 @@
+.home__intro {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.55;
+}

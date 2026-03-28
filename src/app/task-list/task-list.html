@@ -1,7 +1,13 @@
-<h3>Tasks</h3>
-
-<app-task-item
-  *ngFor="let task of tasks"
-  [task]="task"
-  (delete)="deleteTask($event)">
-</app-task-item>
+<section class="task-list" aria-label="Your tasks">
+  <h2 class="task-list__heading">Tasks</h2>
+  <p class="task-list__empty" *ngIf="!tasks().length && !loading()">No tasks yet. Add one above.</p>
+  <p class="task-list__loading" *ngIf="loading() && !tasks().length">Loading…</p>
+  <ul class="task-list__items">
+    <li *ngFor="let task of tasks()" class="task-list__item">
+      <app-task-item
+        [task]="task"
+        (taskRemoved)="deleteTask($event)">
+      </app-task-item>
+    </li>
+  </ul>
+</section>
