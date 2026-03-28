@@ -46,6 +46,22 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "github-pages": {
+              "baseHref": "/task-manager-app/",
+              "outputHashing": "all",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -68,8 +84,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/task-manager-app/",
-            "buildTarget": "task-manager-app:build:production"
+            "buildTarget": "task-manager-app:build:github-pages"
           }
         }
       }
